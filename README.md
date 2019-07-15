@@ -1,4 +1,21 @@
-### Simple Example
+Definition of Tests
+
+#### What are unit tests?
+Unit tests make sure that every unit of code functions correctly in isolation. The reasoning is that if every unit does its job correctly, then it will be easy to compose units together (like Legos), to create an application.
+
+#### What are integration tests?
+With integration tests, your goal is to simulate a real-world scenario in which many units of code collaborate to deliver some value. Another way to look at it is making sure all the units work together as a whole. That is because while each unit can function independently, it must also collaborate correctly with others.
+
+#### Feature tests
+With feature tests, you are testing the application by interacting with it just like a real user would do. So they are integration tests.
+You click on links, buttons, fill in forms, interact with popups, etc.
+
+Feature tests are all about what the user CAN see.
+
+They give you the most bang for your buck in the sense that they make sure your users get value out of your application. Or from a different perspective, you are making sure the application is not broken in such a way that a user might notice.
+Because feature tests need to mimic the user’s behavior as much and as close as possible they are using a web browser to do their work and that is very slow, which is their biggest downside.
+
+### Simple Example Mocked DI Test
 
 ```
 namespace SitePoint\Weather;
@@ -44,7 +61,7 @@ class TemperatureServiceTest extends \PHPUnit_Framework_TestCase
    }
 }
 ```
-### Advanced Example
+### Advanced Example Mocked DI Test
 
 We add the following method to our current WeatherServiceInterface.
 ```
